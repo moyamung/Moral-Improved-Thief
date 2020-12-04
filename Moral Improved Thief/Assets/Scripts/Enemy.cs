@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
     protected GameObject target;
 
-    protected enum State { Idle, Patrol, Move, Attack};
+    public enum State { Idle, Patrol, Move, Attack};
     protected State state;
 
     void Start()
@@ -33,5 +33,15 @@ public class Enemy : MonoBehaviour
     virtual protected void Attack()
     {
 
+    }
+
+    virtual public void SetState(State _state)
+    {
+        state = _state;
+    }
+
+    virtual public void SetTarget(GameObject gameObject)
+    {
+        target = gameObject;
     }
 }

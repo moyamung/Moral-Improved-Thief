@@ -8,7 +8,7 @@ public class FlyingEnemy : Enemy
     float stopDistance = 0.2f;
     void Start()
     {
-        
+        speed = 2f;
     }
 
     // Update is called once per frame
