@@ -5,14 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
+    public enum State { Idle, Patrol, Move, Attack };
+
     protected float hp;
     protected float attack;
     protected float speed;
-
-    protected GameObject target;
-
-    public enum State { Idle, Patrol, Move, Attack};
-    protected State state;
+    [SerializeField] protected GameObject target;
+    [SerializeField] protected State state;
 
     void Start()
     {

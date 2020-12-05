@@ -1234,7 +1234,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapTemplate:
-  - {fileID: 3481932188194057148, guid: d58404f19f0177f46b37c5f18b25014b, type: 3}
+  - {fileID: 856092031622659725, guid: 9381c9c3dfb784a409b2079fb083b55f, type: 3}
+  - {fileID: 744487857861670443, guid: de8244c8906987a49a84dce89a4fa059, type: 3}
+  - {fileID: 7243381253212831683, guid: 10d7976beafd6324f81aea6b5eee5228, type: 3}
+  - {fileID: 4773516279391114087, guid: be405fe48ae910c46a63bbf0f88cb3a8, type: 3}
+  - {fileID: 372856353302491536, guid: 34ee5f485b4ae554687486854f5854cd, type: 3}
+  - {fileID: 5309663361811831218, guid: 181afb4156d045a46a33bb705a5e3af5, type: 3}
   mapList: []
   map: {fileID: 1998288786}
   size: 8
