@@ -60,13 +60,15 @@
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Gizmos.cs" />
     <Compile Include="Assets\Scripts\PortalController.cs" />
+    <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PortalManager.cs" />
-    <Compile Include="Assets\Scripts\PriorityQueue.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\MiniMap.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\FlyingEnemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\PriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\MapManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

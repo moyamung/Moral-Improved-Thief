@@ -492,6 +492,8 @@ GameObject:
   - component: {fileID: 4773516279391114090}
   - component: {fileID: 4773516279391114085}
   - component: {fileID: 4773516279391114084}
+  - component: {fileID: 1124971203857058348}
+  - component: {fileID: 5042816791513585568}
   m_Layer: 0
   m_Name: MapTemplate4
   m_TagString: Untagged
@@ -542,6 +544,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: MapTemplate4
+--- !u!65 &1124971203857058348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773516279391114087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22, y: 16, z: 3}
+  m_Center: {x: 0, y: 0, z: -2}
+--- !u!114 &5042816791513585568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773516279391114087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d091f26b587c7234ab56de916e847300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4773516279555398024
 GameObject:
   m_ObjectHideFlags: 0

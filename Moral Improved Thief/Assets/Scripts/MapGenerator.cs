@@ -8,17 +8,19 @@ public class MapGenerator : MonoBehaviour
 {
     public List<GameObject> mapTemplate;
     [SerializeField]public List<GameObject> mapList;
-    //List<(int, int)> mapGraph;
+    List<(int, int)> mapGraph;
     public Transform map;
     public int size;
+    MiniMap MiniMap;
 
     // Start is called before the first frame update
     void Start()
     {
         mapList = new List<GameObject>();
+        MiniMap = GameObject.Find("Minimap").GetComponent<MiniMap>();
         InstantiateMap();
-        while (GenerateGraph() == null) ;
-        
+        while ((mapGraph = GenerateGraph()) == null) ;
+        MiniMap.SetMapGraph(mapGraph);
     }
 
     void HeapTest()
@@ -48,6 +50,8 @@ public class MapGenerator : MonoBehaviour
             GameObject obj = Instantiate(mapTemplate[r], pos, Quaternion.identity, map);
             mapList.Add(obj);
         }
+
+        MiniMap.SetMapList(mapList);
     }
     
     public void Reconnect()
@@ -56,7 +60,8 @@ public class MapGenerator : MonoBehaviour
         {
             map.GetComponent<PortalManager>().Unconnect();
         }
-        while (GenerateGraph() == null) ;
+        while ((mapGraph = GenerateGraph()) == null) ;
+        MiniMap.SetMapGraph(mapGraph);
     }
 
     List<(int, int)> GenerateMST()
