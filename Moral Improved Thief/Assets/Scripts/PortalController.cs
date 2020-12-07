@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PortalController : MonoBehaviour
 {
-    [SerializeField]private PortalController _connectedPortal;
-    [SerializeField]private bool _isConnected;
+    [SerializeField]protected PortalController _connectedPortal;
+    [SerializeField]protected bool _isConnected;
 
     private void Start()
     {

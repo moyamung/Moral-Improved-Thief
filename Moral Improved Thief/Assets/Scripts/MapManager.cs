@@ -33,6 +33,7 @@ public class MapManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (!minimap) return;
             minimap.SetPlayerPos(index);
         }
     }

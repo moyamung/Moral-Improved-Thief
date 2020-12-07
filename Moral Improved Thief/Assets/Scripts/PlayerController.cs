@@ -30,9 +30,29 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y;
     }
 
-    public void OnSpaceBar()
+    public void OnJump()
     {
         _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, jump, _rigidbody.velocity.z);
+    }
+
+    public void OnInteract()
+    {
+        //interaction with something
+    }
+
+    public void OnFire()
+    {
+        //attack action
+    }
+
+    public void OnSkill()
+    {
+        //skill use
+    }
+
+    public void OnChangeMode()
+    {
+        //Mode change
     }
 
     // Update is called once per frame
