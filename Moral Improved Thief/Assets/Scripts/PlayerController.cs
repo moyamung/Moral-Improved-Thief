@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         //interaction with something
         RaycastHit hitInfo;
         int mask = 1 << 10;
-        if (Physics.Raycast(transform.position, Vector3.forward, out hitInfo, 100f, mask))
+        if (Physics.Raycast(transform.position, Vector3.forward, out hitInfo, 2f, mask))
         {
             hitInfo.collider.gameObject.SendMessage("OnInteraction");
         }
