@@ -38,6 +38,12 @@ public class PlayerController : MonoBehaviour
     public void OnInteract()
     {
         //interaction with something
+        RaycastHit hitInfo;
+        int mask = 1 << 10;
+        if (Physics.Raycast(transform.position, Vector3.forward, out hitInfo, 100f, mask))
+        {
+            hitInfo.collider.gameObject.SendMessage("OnInteraction");
+        }
     }
 
     public void OnFire()
