@@ -83,9 +83,13 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Story Texts\LastEndingFailure.txt" />
      <None Include="Assets\Story Texts\FirstEnding.txt" />
+     <None Include="Assets\Story Texts\LastEndingSuccess.txt" />
      <None Include="Assets\Story Texts\StartStory.txt" />
      <None Include="Assets\Story Texts\TestText.txt" />
+     <None Include="Assets\Story Texts\ThirdEnding.txt" />
+     <None Include="Assets\Story Texts\SecondEnding.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
