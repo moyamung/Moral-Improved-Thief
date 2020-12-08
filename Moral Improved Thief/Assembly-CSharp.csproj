@@ -79,9 +79,13 @@
     <Compile Include="Assets\Scripts\FinalBoss.cs" />
     <Compile Include="Assets\Scripts\FinalBossServer.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\Intro.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Story Texts\TestText_StairwayToHeaven.txt" />
+     <None Include="Assets\Story Texts\FirstEnding.txt" />
+     <None Include="Assets\Story Texts\StartStory.txt" />
+     <None Include="Assets\Story Texts\TestText.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

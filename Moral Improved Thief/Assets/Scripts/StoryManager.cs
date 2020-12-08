@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.IO;
 
 public class StoryManager : MonoBehaviour
 {
     public string path;
+    string currentPath;
     public Text textUI;
+    public List<string> texts;
+    IEnumerator<string> it;
+    public string nextScene;
     // Start is called before the first frame update
     void Start()
     {
-        string currentPath = ".\\Assets\\Story Texts\\";
+        currentPath = ".\\Assets\\Story Texts\\";
         currentPath += path;
-        ReadText(currentPath);
+        it = ReadText(currentPath);
+        it.MoveNext();
+        textUI.text = it.Current;
     }
 
     // Update is called once per frame
@@ -21,15 +28,30 @@ public class StoryManager : MonoBehaviour
     {
         
     }
+    public void OnNext()
+    {
+        if (!it.MoveNext())
+        {
+            //finish
+            SceneManager.LoadScene(nextScene);
+        }
+        //it.MoveNext();
+        textUI.text = it.Current;
+    }
 
-    void ReadText(string path)
+
+
+    IEnumerator<string> ReadText(string path)
     {
         string text = File.ReadAllText(path);
         string[] texts = text.Split(new char[] { '\t' });
+        //List<string> _texts = new List<string>();
         foreach (string paragraph in texts)
         {
-            //paragraph.Replace
-            Debug.Log(paragraph);
+            //paragraph.Replace("\t\n", "");
+            string _paragraph = paragraph.Substring(2);
+            //_texts.Add(_paragraph);
+            yield return _paragraph;
         }
     }
 }
