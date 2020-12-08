@@ -5,14 +5,21 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public enum GameState { Unseen, Open, Unopen};
+    public GameState[] stage;
+    public int nowstage;
     void Start()
     {
-        
+        DontDestroyOnLoad(this.gameObject);
+        nowstage = 0;
+        stage[1] = GameState.Unseen;
+        stage[2] = GameState.Unseen;
+        stage[3] = GameState.Unseen;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

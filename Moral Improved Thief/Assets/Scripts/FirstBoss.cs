@@ -105,6 +105,11 @@ public class FirstBoss : Enemy
         }
     }
 
+    public override void Dead()
+    {
+        base.Dead();
+    }
+
     IEnumerator RightLaserOff()
     {
         rightLaser = false;

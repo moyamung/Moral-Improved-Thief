@@ -35,9 +35,14 @@ public class Enemy : MonoBehaviour
         hp -= damage;
         if (hp <= 0)
         {
-            isDead = true;
-            this.gameObject.SetActive(false);
+            Dead();
         }
+    }
+
+    virtual public void Dead()
+    {
+        isDead = true;
+        this.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
