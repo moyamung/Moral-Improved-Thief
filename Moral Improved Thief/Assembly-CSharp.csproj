@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\Intro.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Reconnector.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Story Texts\LastEndingFailure.txt" />

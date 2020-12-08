@@ -55,8 +55,10 @@ public class MapGenerator : MonoBehaviour
             int r = UnityEngine.Random.Range(0, mapTemplate.Count);
             GameObject obj = Instantiate(mapTemplate[r], pos, Quaternion.identity, map);
             mapList.Add(obj);
+            obj.transform.Find("ATM").GetComponent<Reconnector>().Activate(this);
         }
-
+        //int rr = UnityEngine.Random.Range(0, size);
+        //mapList[0].transform.Find("ATM").GetComponent<Reconnector>().Activate(this);
         MiniMap.SetMapList(mapList);
     }
     
