@@ -76,6 +76,9 @@
     <Compile Include="Assets\Scripts\Elevator.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\StoryManager.cs" />
+    <Compile Include="Assets\Scripts\FinalBoss.cs" />
+    <Compile Include="Assets\Scripts\FinalBossServer.cs" />
+    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Story Texts\TestText_StairwayToHeaven.txt" />

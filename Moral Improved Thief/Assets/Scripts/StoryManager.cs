@@ -28,6 +28,7 @@ public class StoryManager : MonoBehaviour
         string[] texts = text.Split(new char[] { '\t' });
         foreach (string paragraph in texts)
         {
+            //paragraph.Replace
             Debug.Log(paragraph);
         }
     }

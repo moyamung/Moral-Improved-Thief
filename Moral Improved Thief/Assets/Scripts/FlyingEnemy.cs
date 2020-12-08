@@ -5,10 +5,14 @@ using UnityEngine;
 public class FlyingEnemy : Enemy
 {
     // Start is called before the first frame update
-    float stopDistance = 2f;
+    float stopDistance = 4f;
+    public GameObject bulletPrefab;
+    private float attackCoolDown = 1.5f;
+    private bool attackAble;
     void Start()
     {
         speed = 2f;
+        attackAble = true;
     }
 
     // Update is called once per frame
@@ -36,6 +40,17 @@ public class FlyingEnemy : Enemy
 
     protected override void Attack()
     {
-        base.Attack();
+        //base.Attack();
+        if (!attackAble) return;
+        GameObject bullet = Instantiate(bulletPrefab, this.transform.position, Quaternion.identity);
+        bullet.transform.up = this.transform.forward;
+        _ = StartCoroutine("AttackCool");
+    }
+
+    IEnumerator AttackCool()
+    {
+        attackAble = false;
+        yield return new WaitForSeconds(attackCoolDown);
+        attackAble = true;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : EnemyController
 {
-    private void Awake()
+    new private void Awake()
     {
         base.Awake();
         InvokeRepeating("Spawn", 0f, 20f);

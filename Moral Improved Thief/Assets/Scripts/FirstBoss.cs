@@ -25,6 +25,7 @@ public class FirstBoss : Enemy
     void Update()
     {
         Laser(theta);
+        LaserHit(theta);
         theta += 2f * Mathf.PI * freq * Time.deltaTime;
         if (theta > 2f * Mathf.PI) theta -= 2f * Mathf.PI;
     }
@@ -61,7 +62,33 @@ public class FirstBoss : Enemy
         }
     }
 
-
+    void LaserHit(float theta)
+    {
+        Vector3 dir = new Vector3(Mathf.Cos(theta), Mathf.Sin(theta), 0f);
+        RaycastHit hitInfo;
+        //int mask = 1 << 9;
+        //Debug.DrawRay(transform.position, dir * 100f, Color.red);
+        if (rightLaser == true)
+        {
+            if (Physics.Raycast(transform.position, dir, out hitInfo, 100f))
+            {
+                if (hitInfo.collider.CompareTag("Player"))
+                {
+                    //hit;
+                }
+            }
+        }
+        if (leftLaser == true)
+        {
+            if (Physics.Raycast(transform.position, -dir, out hitInfo, 100f))
+            {
+                if (hitInfo.collider.CompareTag("Player"))
+                {
+                    //hit;
+                }
+            }
+        }
+    }
 
     public void LaserOff(int x)
     {
