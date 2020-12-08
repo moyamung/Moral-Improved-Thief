@@ -19,13 +19,19 @@ public class MapGenerator : MonoBehaviour
         mapList = new List<GameObject>();
         MiniMap = GameObject.Find("Minimap").GetComponent<MiniMap>();
         InstantiateMap();
-        while ((mapGraph = GenerateGraph()) == null) ;
+        while ((mapGraph = GenerateGraph()) == null)
+        {
+            foreach (GameObject map in mapList)
+            {
+                map.GetComponent<PortalManager>().Unconnect();
+            }
+        }
         MiniMap.SetMapGraph(mapGraph);
     }
 
     void HeapTest()
     {
-        MinHeap<int> heap = new MinHeap<int>();
+        MinHeap<int> heap = new MinHeap<int>(999);
         heap.Add(2);
         heap.Add(4);
         heap.Add(3);
@@ -46,7 +52,7 @@ public class MapGenerator : MonoBehaviour
             Vector3 pos = new Vector3(i * 25, 0, 0);
             //GameObject obj = Instantiate(mapTemplate[0], pos, Quaternion.identity, map);
             //random map taking
-            int r = UnityEngine.Random.Range(0, mapList.Count - 1);
+            int r = UnityEngine.Random.Range(0, mapTemplate.Count);
             GameObject obj = Instantiate(mapTemplate[r], pos, Quaternion.identity, map);
             mapList.Add(obj);
         }
@@ -60,13 +66,19 @@ public class MapGenerator : MonoBehaviour
         {
             map.GetComponent<PortalManager>().Unconnect();
         }
-        while ((mapGraph = GenerateGraph()) == null) ;
+        while ((mapGraph = GenerateGraph()) == null)
+        {
+            foreach (GameObject map in mapList)
+            {
+                map.GetComponent<PortalManager>().Unconnect();
+            }
+        }
         MiniMap.SetMapGraph(mapGraph);
     }
 
     List<(int, int)> GenerateMST()
     {
-        MinHeap<ValueTuple<float, int, int>> minHeap = new MinHeap<ValueTuple<float, int, int>>();
+        MinHeap<ValueTuple<float, int, int>> minHeap = new MinHeap<ValueTuple<float, int, int>>((99f,0,0));
 
         for (int i = 0; i < size; i++)
         {
@@ -117,7 +129,7 @@ public class MapGenerator : MonoBehaviour
 
     List<(int, int)> GenerateGraph()
     {
-        MinHeap<ValueTuple<float, int, int>> minHeap = new MinHeap<ValueTuple<float, int, int>>();
+        MinHeap<ValueTuple<float, int, int>> minHeap = new MinHeap<ValueTuple<float, int, int>>((99f,0,0));
 
         for (int i = 0; i < size; i++)
         {
@@ -125,6 +137,7 @@ public class MapGenerator : MonoBehaviour
             {
                 float len = UnityEngine.Random.Range(0.1f, 10.0f);
                 ValueTuple<float, int, int> edge = (len, i, j);
+                if (i == j) continue;
                 minHeap.Add(edge);
             }
         }
@@ -158,13 +171,13 @@ public class MapGenerator : MonoBehaviour
                 }
                 if (chk > 1)
                 {
-                    Debug.LogError("infinite loop");
+                    Debug.LogWarning("infinite loop");
                     return null;
                 }
-                else break;
+                return _mapGraph;
             }
         }
-        return _mapGraph;
+        //return _mapGraph;
     }
 
     int FindParent(int[] parent, int idx)

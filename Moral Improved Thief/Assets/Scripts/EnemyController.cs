@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     public List<Enemy> enemyList;
     // Start is called before the first frame update
-    void Awake()
+    protected void Awake()
     {
         enemyList = new List<Enemy>();
         Transform[] enemyChild = GetComponentsInChildren<Transform>();
@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
         {
             foreach(Enemy enemy in enemyList)
             {
+                if (enemy.isDead) continue;
                 enemy.SetTarget(other.gameObject);
                 enemy.SetState(Enemy.State.Attack);
             }
@@ -41,6 +42,7 @@ public class EnemyController : MonoBehaviour
         {
             foreach (Enemy enemy in enemyList)
             {
+                if (enemy.isDead) continue;
                 enemy.SetState(Enemy.State.Idle);
                 enemy.SetTarget(null);
             }

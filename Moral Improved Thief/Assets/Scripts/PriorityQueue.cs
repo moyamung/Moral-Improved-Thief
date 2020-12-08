@@ -9,9 +9,13 @@ public class MinHeap<T> where T : System.IComparable<T>
     public T[] heap;
     int size;
 
-    public MinHeap(int maxSize = 300) {
+    public MinHeap(T initial, int maxSize = 300) {
         size = 0;
         heap = new T[maxSize];
+        for (int i = 0; i < maxSize; i++)
+        {
+            heap[i] = initial;
+        }
     }
 
     public void Add(T e)

@@ -594,10 +594,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103109307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477882678}
+  - {fileID: 674676196692202102}
   m_Father: {fileID: 856092031622659726}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -612,8 +613,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19, y: 14, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 19, y: 14, z: 3}
+  m_Center: {x: 0, y: 0, z: -1}
 --- !u!114 &1103109310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14994,6 +14995,68 @@ Transform:
   m_Father: {fileID: 856092031622659726}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &919898405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1103109308}
+    m_Modifications:
+    - target: {fileID: 674676196462757747, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_Name
+      value: BattleDrone1
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000002670165
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70686543
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000026683432
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70734805
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.961
+      objectReference: {fileID: 0}
+    - target: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+--- !u!4 &674676196692202102 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 674676196462861139, guid: bf5d12ff407052945af23bd4f2f0db4d, type: 3}
+  m_PrefabInstance: {fileID: 919898405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &43088653478988569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15066,6 +15129,10 @@ PrefabInstance:
     - target: {fileID: 442680411636454669, guid: 520da6feef126354a9de2064af93e519, type: 3}
       propertyPath: m_Name
       value: FlyingEnemyTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 442680411636454669, guid: 520da6feef126354a9de2064af93e519, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 442680411636454768, guid: 520da6feef126354a9de2064af93e519, type: 3}
       propertyPath: m_IsTrigger

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlyingEnemy : Enemy
 {
     // Start is called before the first frame update
-    float stopDistance = 0.2f;
+    float stopDistance = 2f;
     void Start()
     {
         speed = 2f;
@@ -29,7 +29,9 @@ public class FlyingEnemy : Enemy
 
     protected override void MoveTo(Vector3 x)
     {
-        this.transform.Translate((x - this.transform.position).normalized * speed * Time.deltaTime);
+        //this.transform.Translate((x - this.transform.position).normalized * speed * Time.deltaTime);
+        this.transform.forward = (x - this.transform.position).normalized;
+        this.transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
     protected override void Attack()

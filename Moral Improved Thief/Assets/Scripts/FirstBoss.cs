@@ -7,12 +7,18 @@ public class FirstBoss : Enemy
     [SerializeField] LineRenderer laser;
     [SerializeField] float freq;
     float theta;
+    bool rightLaser;
+    bool leftLaser;
+    IEnumerator enumerator;
+
     // Start is called before the first frame update
     void Start()
     {
         theta = 0;
         laser = transform.Find("Laser").GetComponent<LineRenderer>();
         freq = 0.04f;
+        rightLaser = true;
+        leftLaser = true;
     }
 
     // Update is called once per frame
@@ -33,11 +39,56 @@ public class FirstBoss : Enemy
         if (Physics.Raycast(transform.position, dir, out hitInfo, 100f, mask))
         {
             //Debug.Log(hitInfo.collider.gameObject.name);
-            laser.SetPosition(0, hitInfo.point);
+            if (rightLaser == false)
+            {
+                laser.SetPosition(0, transform.position);
+            }
+            else
+            {
+                laser.SetPosition(0, hitInfo.point);
+            }
         }
         if (Physics.Raycast(transform.position, -dir, out hitInfo, 100f, mask))
         {
-            laser.SetPosition(1, hitInfo.point);
+            if (leftLaser == false)
+            {
+                laser.SetPosition(1, transform.position);
+            }
+            else
+            {
+                laser.SetPosition(1, hitInfo.point);
+            }
         }
+    }
+
+
+
+    public void LaserOff(int x)
+    {
+        if (x == 0)
+        {
+            //left
+            enumerator = LeftLaserOff();
+            StartCoroutine(enumerator);
+        }
+        else
+        {
+            enumerator = RightLaserOff();
+            StartCoroutine(enumerator);
+        }
+    }
+
+    IEnumerator RightLaserOff()
+    {
+        rightLaser = false;
+        yield return new WaitForSeconds(4f);
+        rightLaser = true;
+    }
+
+    IEnumerator LeftLaserOff()
+    {
+        leftLaser = false;
+        yield return new WaitForSeconds(4f);
+        leftLaser = true;
     }
 }

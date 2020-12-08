@@ -8,14 +8,36 @@ public class Enemy : MonoBehaviour
     public enum State { Idle, Patrol, Move, Attack };
 
     protected float hp;
+    public float maxHp;
     protected float attack;
     protected float speed;
     [SerializeField] protected GameObject target;
     [SerializeField] protected State state;
+    public bool isDead;
+    private Vector3 spawnPoint;
 
     void Start()
     {
+        spawnPoint = transform.position;
+        Spawn();
+    }
+
+    public void Spawn()
+    {
         state = State.Idle;
+        hp = maxHp;
+        isDead = false;
+        transform.position = spawnPoint;
+    }
+
+    public void OnHit(float damage)
+    {
+        hp -= damage;
+        if (hp <= 0)
+        {
+            isDead = true;
+            this.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame

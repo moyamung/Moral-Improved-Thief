@@ -50,7 +50,7 @@ public class MiniMap : MonoBehaviour
 
     void DrawLine(Vector3 startPos, Vector3 endPos)
     {
-        GameObject line = Instantiate(linePrefab, (startPos + endPos) / 2, Quaternion.identity, canvas.transform);
+        GameObject line = Instantiate(linePrefab, (startPos + endPos) / 2, Quaternion.identity, LIneParent.transform);
         Vector3 dir = endPos - startPos;
         line.transform.Rotate(0f, 0f, Mathf.Atan2(dir.y, dir.x) * 180f / Mathf.PI);
         //line.GetComponent<RectTransform>().sizeDelta.Set(dir.magnitude, 1f);
@@ -74,6 +74,10 @@ public class MiniMap : MonoBehaviour
 
     public void SetMapGraph(List<(int, int)> list)
     {
+        foreach (Transform child in LIneParent)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         mapGraph = list;
         int listCount = mapGraph.Count;
         for (int i = 0; i < listCount; i++)
