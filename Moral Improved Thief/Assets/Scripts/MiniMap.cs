@@ -17,9 +17,14 @@ public class MiniMap : MonoBehaviour
     Transform mapParent;
     Transform LIneParent;
 
+    public Sprite mapImageSprite;
+    public Sprite nowMapImageSprite;
+
     float radius = 50f;
     public GameObject mapImage;
     int playerPos;
+
+
 
     void Awake()
     {
@@ -69,6 +74,7 @@ public class MiniMap : MonoBehaviour
             GameObject miniMapImage = Instantiate(mapImage, mapParent);
             float angle = 2f * Mathf.PI * i / (float)mapcount;
             miniMapImage.transform.localPosition = new Vector3(radius * Mathf.Sin(angle), radius * Mathf.Cos(angle), 0f);
+            miniMapImage.GetComponent<Image>().sprite = mapImageSprite;
         }
     }
 
@@ -89,8 +95,8 @@ public class MiniMap : MonoBehaviour
 
     public void SetPlayerPos(int idx)
     {
-        mapParent.GetChild(playerPos).GetComponent<Image>().color = Color.white;
+        mapParent.GetChild(playerPos).GetComponent<Image>().sprite = mapImageSprite;
         playerPos = idx;
-        mapParent.GetChild(playerPos).GetComponent<Image>().color = Color.blue;
+        mapParent.GetChild(playerPos).GetComponent<Image>().sprite = nowMapImageSprite;
     }
 }

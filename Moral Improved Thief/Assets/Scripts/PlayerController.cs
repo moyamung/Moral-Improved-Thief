@@ -110,8 +110,16 @@ public class PlayerController : MonoBehaviour
                 break;
             case 1:
                 isCharge = true;
-                if (seeRight) _rigidbody.velocity = new Vector3(_rigidbody.velocity.x + 2f, _rigidbody.velocity.y, _rigidbody.velocity.z);
-                else _rigidbody.velocity = new Vector3(_rigidbody.velocity.x - 2f, _rigidbody.velocity.y, _rigidbody.velocity.z);
+                if (seeRight)
+                {
+                    _rigidbody.velocity = new Vector3(9f, _rigidbody.velocity.y, _rigidbody.velocity.z);
+                    //_rigidbody.AddForce(new Vector3(0f, 0f, 4f));
+                }
+                else
+                {
+                    _rigidbody.velocity = new Vector3(-9f, _rigidbody.velocity.y, _rigidbody.velocity.z);
+                    //_rigidbody.AddForce(new Vector3(0f, 0f, -4f));
+                }
                 break;
             case 2:
                 isHacking = true;
