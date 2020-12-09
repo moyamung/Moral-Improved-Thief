@@ -20,7 +20,7 @@ public class MiniMap : MonoBehaviour
     public Sprite mapImageSprite;
     public Sprite nowMapImageSprite;
 
-    float radius = 50f;
+    float radius = 75f;
     public GameObject mapImage;
     int playerPos;
 
