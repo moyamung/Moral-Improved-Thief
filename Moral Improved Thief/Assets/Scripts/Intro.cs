@@ -25,7 +25,7 @@ public class Intro : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("StoryTest");
+        SceneManager.LoadScene("IntroStory");
     }
 
     public void Exit()

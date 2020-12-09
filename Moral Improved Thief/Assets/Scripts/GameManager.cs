@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
     public int nowstage;
     void Start()
     {
+        stage = new GameState[4];
         DontDestroyOnLoad(this.gameObject);
-        nowstage = 0;
+        //nowstage = 0;
         stage[1] = GameState.Unseen;
         stage[2] = GameState.Unseen;
         stage[3] = GameState.Unseen;
@@ -26,5 +27,13 @@ public class GameManager : MonoBehaviour
     public void Save(int _stage, GameState state)
     {
         stage[_stage] = state;
+    }
+
+    public void Reset()
+    {
+        nowstage = 0;
+        stage[1] = GameState.Unseen;
+        stage[2] = GameState.Unseen;
+        stage[3] = GameState.Unseen;
     }
 }

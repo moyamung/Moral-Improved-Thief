@@ -11,6 +11,8 @@ public class FirstBoss : Enemy
     bool leftLaser;
     IEnumerator enumerator;
 
+    public GameObject select;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,14 @@ public class FirstBoss : Enemy
         freq = 0.04f;
         rightLaser = true;
         leftLaser = true;
+        select = FindObjectOfType<Choice>().gameObject;
+        select.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDead == true) return;
         Laser(theta);
         LaserHit(theta);
         theta += 2f * Mathf.PI * freq * Time.deltaTime;
@@ -107,7 +112,8 @@ public class FirstBoss : Enemy
 
     public override void Dead()
     {
-        base.Dead();
+        isDead = true;
+        select.SetActive(true);
     }
 
     IEnumerator RightLaserOff()

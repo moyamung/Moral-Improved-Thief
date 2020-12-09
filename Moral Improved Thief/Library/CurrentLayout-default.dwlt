@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 89
+  controlID: 72
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 126
+  controlID: 73
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 127
+  controlID: 74
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1030,7 +1030,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a4e6f3ff02e7f3ff0ae7f3ff66e8f3ff50fcf3ff5600f4fff40bf4ff0216f4ff161af4ffc21ef4ff122ef4ff1c2ef4ffb233f4ff6c34f4fff636f4ff9640f4ff9a40f4ff9c40f4ff9e40f4ffd28bf4ff508df4ffa28df4ff928ff4ffb291f4ff7085f5ff8885f5ff94f7f5ffb218f6ffd867f6ff3e68f6ff3c6ff6ffca80f6ff30b2f6ff2a7afaffb67afafff07afaff0a7bfaff3a7bfaff0c7efaff287efafff07efafffc7efaff087ffaff1e7ffaff207ffaff545cfbff7c5cfbff7e5dfbff545ffbffec61fbffac72fbffee72fbff9073fbffd273fbff0a77fbff6e7efbff408cfbff9eb2fbff7ac9fbffd8cdfbff1cdefbff388bfcffe68bfcffecccfcff0223feff2223feffa437feff3060feff3460feff7a60feff8260feffe465feffec65feff5c7dfeff447efeffd482feffe282feff548efeffe0a0feffaea1feffeee7feff8e04ffff081dffff141dffff201dffff361dffff5e8affff688affff7a8affff808affff968affff3a8bffff488cffffd2b8ffff28dbffff2cdbffff30dbffff02ddffff7ae2ffff42ecffff16efffff76f6ffff32fbffff5454000090540000ce540000f8f00000e60201005e050100aa8b0200d08b0200fcb002001eb10200661b03003a1c0300561c03000c1e0300881e0300b41e0300
+      m_ExpandedIDs: 0cf9ffff32fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1234,21 +1234,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Unity\CTP321\moral-improved-thief\Moral Improved Thief
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 392}
-    m_SelectedIDs: 844d0000
-    m_LastClickedID: 19844
-    m_ExpandedIDs: 00000000664b0000684b00006a4b0000744d0000764d0000784d0000b0580000b2700000888400008a840000c46e0100c86e0100d06e010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 60}
+    m_SelectedIDs: 8e490000
+    m_LastClickedID: 18830
+    m_ExpandedIDs: 00000000784700007a4700007c47000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1276,7 +1276,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000664b0000684b00006a4b0000
+    m_ExpandedIDs: 00000000784700007a4700007c470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

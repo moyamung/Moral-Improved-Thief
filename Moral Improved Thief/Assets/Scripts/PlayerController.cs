@@ -234,6 +234,11 @@ public class PlayerController : MonoBehaviour
         {
             if (movementY >= 0.9f && portalUseable == true)
             {
+                if (other.GetComponent<LobbyPortal>())
+                {
+                    other.GetComponent<LobbyPortal>().UsePortal(this.gameObject);
+                    return;
+                }
                 other.GetComponent<PortalController>().UsePortal(this.gameObject);
                 portalUseable = false;
                 StartCoroutine("PortalDelay");

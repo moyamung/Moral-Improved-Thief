@@ -18,7 +18,8 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        ControlbyMap(player.transform.position);
+        //ControlbyMap(player.transform.position);
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
     }
 
     void ControlbyMap(Vector3 playerPosition)

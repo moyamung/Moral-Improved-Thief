@@ -213,7 +213,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964890857}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 29, y: 19, z: 3}
@@ -281,7 +281,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961311966}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5, y: 3, z: 1}
@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 8393911541680947979}
   - component: {fileID: 8393911541680947980}
   - component: {fileID: 8393911541680947981}
+  - component: {fileID: 5670722499103824047}
   m_Layer: 0
   m_Name: BossMap1
   m_TagString: Untagged
@@ -511,6 +512,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: BossMap1
+--- !u!114 &5670722499103824047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393911541680947982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d091f26b587c7234ab56de916e847300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8393911541897519632
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8393911542126356601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17, y: 2, z: -2}
+  m_LocalPosition: {x: -17, y: 3, z: -2}
   m_LocalScale: {x: 5, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 8393911542620941186}
@@ -1103,8 +1116,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8393911542448809357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: -2}
-  m_LocalScale: {x: 1, y: 5, z: 3}
+  m_LocalPosition: {x: -20, y: 0.5, z: -2}
+  m_LocalScale: {x: 1, y: 6, z: 3}
   m_Children: []
   m_Father: {fileID: 8393911542620941186}
   m_RootOrder: 8
@@ -1994,8 +2007,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8393911543456674342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 6, z: -2}
-  m_LocalScale: {x: 1, y: 8, z: 3}
+  m_LocalPosition: {x: -15, y: 6.5, z: -2}
+  m_LocalScale: {x: 1, y: 7, z: 3}
   m_Children: []
   m_Father: {fileID: 8393911542620941186}
   m_RootOrder: 4
@@ -2603,7 +2616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6185937851195669113, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6185937851196024401, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
       propertyPath: m_Layer
@@ -2613,6 +2626,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6185937851196024403, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6185937851196024409, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
       propertyPath: m_Name
       value: Future_Door_Final
@@ -2620,6 +2637,10 @@ PrefabInstance:
     - target: {fileID: 6185937851196024409, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185937851196024409, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6185937851196024411, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
       propertyPath: m_Layer
@@ -2629,9 +2650,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6185937851196024413, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6185937851196024415, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185937851196024415, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea51da4cf1acfea49802848e749a5a13, type: 3}

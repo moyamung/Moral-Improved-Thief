@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class LobbyPortal : MonoBehaviour
 {
     public int number;
+    GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = FindObjectOfType<GameManager>();
+        if (gm.nowstage < number) this.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,19 +23,25 @@ public class LobbyPortal : MonoBehaviour
     public void UsePortal(GameObject Player)
     {
         GameManager gm = FindObjectOfType<GameManager>();
-        if (number == 4)
+        if (number == 3)
         {
-            if (gm.stage[1] == GameManager.GameState.Open && gm.stage[2] == GameManager.GameState.Open && gm.stage[3] == GameManager.GameState.Open)
-            {
-                SceneManager.LoadScene("LastMap");
-            }
+            gm.nowstage = 4;
+            SceneManager.LoadScene("LastMap");
         }
-        else 
+        else if (number == 2)
         {
-            if (gm.stage[number] == GameManager.GameState.Unseen)
-            {
-                SceneManager.LoadScene("First");
-            }
+            gm.nowstage = 3;
+            SceneManager.LoadScene("ThirdMap");
+        }
+        else if (number == 1)
+        {
+            gm.nowstage = 2;
+            SceneManager.LoadScene("SecondMap");
+        }
+        else if (number == 0)
+        {
+            gm.nowstage = 1;
+            SceneManager.LoadScene("FirstMap");
         }
     }
 }

@@ -9,9 +9,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: b695e90426900f747965daee763eab3a
   - enabled: 1
-    path: Assets/Scenes/StoryTest.unity
-    guid: 28dd4fe4d55af1447af51246387e5826
-  - enabled: 1
     path: Assets/Scenes/MapGenTest.unity
     guid: 3760d51c0d9cd9d45857ccd9d8dfbcc0
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 660134d45a629e241be6d7503e98ebed
+  - enabled: 1
+    path: Assets/Scenes/IntroStory.unity
+    guid: 39f9818836e0b584a99ef41c2a39aeb0
+  - enabled: 1
+    path: Assets/Scenes/FirstEnding.unity
+    guid: 7efe9c46d7f3aae4b980448a8eb6f969
+  - enabled: 1
+    path: Assets/Scenes/SecondEnding.unity
+    guid: 3210d03a286d148479fa74906b041700
+  - enabled: 1
+    path: Assets/Scenes/ThirdEnding.unity
+    guid: 0f27ce8f2220e8e46a48282ad84030e6
+  - enabled: 1
+    path: Assets/Scenes/LastEndingFailure.unity
+    guid: 0c7df5304d44fe346b736775161d4d64
+  - enabled: 1
+    path: Assets/Scenes/LastEndingSuccess.unity
+    guid: 44a5520294a348641b3bc37911555673
+  - enabled: 1
+    path: Assets/Scenes/FirstMap.unity
+    guid: c81eccddbe3c01c478b92c6045cfcd8b
+  - enabled: 1
+    path: Assets/Scenes/SecondMap.unity
+    guid: 22b52791a79c75243b01a53f06c7fbfc
+  - enabled: 1
+    path: Assets/Scenes/ThirdMap.unity
+    guid: 7139b13388d3a06439a5b28faa7f8c12
+  - enabled: 1
+    path: Assets/Scenes/LastMap.unity
+    guid: 98e2589f9b301474a932590b1f9d3cfc
   m_configObjects: {}

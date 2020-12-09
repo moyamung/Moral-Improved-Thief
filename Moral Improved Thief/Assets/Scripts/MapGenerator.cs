@@ -7,6 +7,7 @@ using UnityEngine;
 public class MapGenerator : MonoBehaviour
 {
     public List<GameObject> mapTemplate;
+    public GameObject BossMap;
     [SerializeField]public List<GameObject> mapList;
     List<(int, int)> mapGraph;
     public Transform map;
@@ -47,7 +48,7 @@ public class MapGenerator : MonoBehaviour
 
     void InstantiateMap()
     {
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size-1; i++)
         {
             Vector3 pos = new Vector3(i * 25, 0, 0);
             //GameObject obj = Instantiate(mapTemplate[0], pos, Quaternion.identity, map);
@@ -57,6 +58,8 @@ public class MapGenerator : MonoBehaviour
             mapList.Add(obj);
             obj.transform.Find("ATM").GetComponent<Reconnector>().Activate(this);
         }
+        GameObject boss = Instantiate(BossMap, new Vector3(size * 25f + 25f, 0f, 0f), Quaternion.identity, map);
+        mapList.Add(boss);
         //int rr = UnityEngine.Random.Range(0, size);
         //mapList[0].transform.Find("ATM").GetComponent<Reconnector>().Activate(this);
         MiniMap.SetMapList(mapList);

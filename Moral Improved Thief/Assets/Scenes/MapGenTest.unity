@@ -1374,7 +1374,7 @@ GameObject:
   - component: {fileID: 1639639859}
   - component: {fileID: 1639639858}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: MapManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1399,6 +1399,9 @@ MonoBehaviour:
   - {fileID: 4773516279391114087, guid: be405fe48ae910c46a63bbf0f88cb3a8, type: 3}
   - {fileID: 372856353302491536, guid: 34ee5f485b4ae554687486854f5854cd, type: 3}
   - {fileID: 5309663361811831218, guid: 181afb4156d045a46a33bb705a5e3af5, type: 3}
+  - {fileID: 5279025326374962036, guid: fb5bb7528ccb30a45be2fe846bdb475c, type: 3}
+  - {fileID: 748327111067768042, guid: 62f47275c8850b242965f223c01de602, type: 3}
+  BossMap: {fileID: 8393911541680947982, guid: 2d9d88481d29f2e48bde840d5f05e189, type: 3}
   mapList: []
   map: {fileID: 1998288786}
   size: 8
