@@ -178,5 +178,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Story
       objectReference: {fileID: 0}
+    - target: {fileID: 7734948303651292465, guid: fe707f9136668bc40b02d5ea695a2ab4, type: 3}
+      propertyPath: path
+      value: DeadEnd.txt
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe707f9136668bc40b02d5ea695a2ab4, type: 3}

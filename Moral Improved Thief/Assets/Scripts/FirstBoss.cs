@@ -79,6 +79,7 @@ public class FirstBoss : Enemy
             {
                 if (hitInfo.collider.CompareTag("Player"))
                 {
+                    hitInfo.collider.GetComponent<PlayerController>().OnHit(10f);
                     //hit;
                 }
             }
@@ -90,6 +91,7 @@ public class FirstBoss : Enemy
                 if (hitInfo.collider.CompareTag("Player"))
                 {
                     //hit;
+                    hitInfo.collider.GetComponent<PlayerController>().OnHit(10f);
                 }
             }
         }

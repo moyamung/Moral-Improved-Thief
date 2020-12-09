@@ -28,11 +28,12 @@ public class FinalBoss : MonoBehaviour
     {
         RaycastHit hitInfo;
         Vector3 dir = servers[nowLaserPos.Item2].transform.position - servers[nowLaserPos.Item1].transform.position;
-        if (Physics.Raycast(servers[nowLaserPos.Item1].transform.position, dir, out hitInfo, dir.magnitude))
+        if (Physics.Raycast(servers[nowLaserPos.Item1].transform.position, dir.normalized, out hitInfo, dir.magnitude))
         {
             if (hitInfo.collider.CompareTag("Player"))
             {
                 //hit;
+                hitInfo.collider.GetComponent<PlayerController>().OnHit(10f);
             }
         }
     }

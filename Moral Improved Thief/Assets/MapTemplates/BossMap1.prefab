@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 8393911541680947980}
   - component: {fileID: 8393911541680947981}
   - component: {fileID: 161494411}
+  - component: {fileID: 829001381204790025}
   m_Layer: 0
   m_Name: BossMap1
   m_TagString: Untagged
@@ -525,6 +526,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d091f26b587c7234ab56de916e847300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &829001381204790025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393911541680947982}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40, y: 20, z: 3}
+  m_Center: {x: 0, y: 0, z: -2}
 --- !u!1 &8393911541897519632
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     float jump = 9f;
     const float portalDelay = 0.3f;
 
+    public float maxHp;
+    public float hp;
+
     bool portalUseable;
 
     float changetype;
@@ -56,6 +59,8 @@ public class PlayerController : MonoBehaviour
 
         isGround = true;
         seeRight = true;
+
+        hp = maxHp;
     }
 
     public void OnMove(InputValue movementValue)
@@ -258,5 +263,12 @@ public class PlayerController : MonoBehaviour
         GameManager gm = FindObjectOfType<GameManager>();
         if (gm.nowstage == 4) SceneManager.LoadScene("LastEndingFailure");
         else SceneManager.LoadScene("DeadEnd");
+    }
+
+    public void OnHit(float damage)
+    {
+        hp -= damage;
+        Hit = true;
+        if (hp <= 0) Dead();
     }
 }

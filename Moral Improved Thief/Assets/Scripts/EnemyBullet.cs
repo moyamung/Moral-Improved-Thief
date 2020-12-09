@@ -22,11 +22,10 @@ public class EnemyBullet : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //hit;
+            other.GetComponent<PlayerController>().OnHit(5f);
         }
         else if (other.CompareTag("Wall"))
         {
-            Debug.Log("hello");
             Destroy(this.gameObject);
         }
     }
