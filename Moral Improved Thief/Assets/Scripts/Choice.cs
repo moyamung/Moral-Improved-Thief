@@ -21,13 +21,16 @@ public class Choice : MonoBehaviour
     {
         GameManager gm = FindObjectOfType<GameManager>();
         gm.Save(gm.nowstage, GameManager.GameState.Open);
-        if (gm.nowstage != 3) SceneManager.LoadScene("Lobby");
+        if (gm.nowstage == 1) SceneManager.LoadScene("FirstEnding");
+        if (gm.nowstage == 2) SceneManager.LoadScene("SecondEnding");
+        if (gm.nowstage == 3) SceneManager.LoadScene("SecondEnding");
+        //if (gm.nowstage != 3) SceneManager.LoadScene("Lobby");
     }
     
     public void NO()
     {
         GameManager gm = FindObjectOfType<GameManager>();
         gm.Save(gm.nowstage, GameManager.GameState.Unopen);
-        if (gm.nowstage != 3) SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("Lobby");
     }
 }
