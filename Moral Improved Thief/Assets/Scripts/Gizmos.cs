@@ -21,6 +21,6 @@ public class Gizmos : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Handles.Label(transform.position, text);
+        //Handles.Label(transform.position, text);
     }
 }
