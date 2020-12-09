@@ -22,4 +22,9 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+    public void Save(int _stage, GameState state)
+    {
+        stage[_stage] = state;
+    }
 }
