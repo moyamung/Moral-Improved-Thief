@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Reconnector.cs" />
     <Compile Include="Assets\Scripts\Choice.cs" />
+    <Compile Include="Assets\Scripts\LobbyPortal.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Story Texts\LastEndingFailure.txt" />
