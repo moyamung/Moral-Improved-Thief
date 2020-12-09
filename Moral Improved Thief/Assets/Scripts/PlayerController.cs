@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     float speed = 4.0f;
     float jump = 9f;
     const float portalDelay = 0.3f;
+    const float hitDelay = 3f;
+    const float rifleDelay = 0.3f;
+    const float missileDelay = 2f;
 
     public float maxHp;
     public float hp;
@@ -22,6 +25,9 @@ public class PlayerController : MonoBehaviour
     public GameObject missile;
 
     bool portalUseable;
+    bool hitable;
+    bool rifleShootAble;
+    bool missileShootAble;
 
     float changetype;
 
@@ -46,6 +52,10 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>();
         portalUseable = true;
+        hitable = true;
+        rifleShootAble = true;
+        missileShootAble = true;
+        isDead = false;
 
         DeadHash = Animator.StringToHash("Dead");
         needtoidleHash = Animator.StringToHash("needtoidle");
@@ -76,6 +86,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump()
     {
+        if (!isGround) return;
         _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, jump, _rigidbody.velocity.z);
         isJump=true;
     }
@@ -94,8 +105,12 @@ public class PlayerController : MonoBehaviour
     public void OnFire()
     {
         //attack action
+        if (!rifleShootAble) return;
         GameObject bullet = Instantiate(rifleBullet, this.transform.position + Vector3.forward * 0.3f + Vector3.up, Quaternion.identity);
         bullet.transform.up = this.transform.forward;
+        rifleShootAble = false;
+        isFire = true;
+        StartCoroutine("RifleDelay");
         /*
         switch(actiontype)
         {
@@ -115,8 +130,12 @@ public class PlayerController : MonoBehaviour
     public void OnSkill()
     {
         //skill use
+        if (!missileShootAble) return;
         GameObject miss = Instantiate(missile, this.transform.position + Vector3.forward * 0.3f + Vector3.up, Quaternion.identity);
         miss.transform.up = this.transform.forward;
+        missileShootAble = false;
+        isMissile = true;
+        StartCoroutine("MissileDelay");
         /*
         switch(actiontype)
         {
@@ -270,6 +289,24 @@ public class PlayerController : MonoBehaviour
         portalUseable = true;
     }
 
+    IEnumerator HitDelay()
+    {
+        yield return new WaitForSeconds(hitDelay);
+        hitable = true;
+    }
+
+    IEnumerator RifleDelay()
+    {
+        yield return new WaitForSeconds(rifleDelay);
+        rifleShootAble = true;
+    }
+
+    IEnumerator MissileDelay()
+    {
+        yield return new WaitForSeconds(missileDelay);
+        missileShootAble = true;
+    }
+
     void Dead()
     {
         GameManager gm = FindObjectOfType<GameManager>();
@@ -279,8 +316,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnHit(float damage)
     {
+        if (!hitable) return;
         hp -= damage;
         Hit = true;
         if (hp <= 0) Dead();
+        hitable = false;
+        StartCoroutine("HitDelay");
     }
 }
