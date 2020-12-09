@@ -6,10 +6,10 @@ public class EnemyBullet : MonoBehaviour
 {
     // Start is called before the first frame update
     float speed = 2f;
-    float bulletLife = 5f;
+    float bulletLife = 3f;
     void Start()
     {
-        
+        StartCoroutine("BulletLife");
     }
 
     // Update is called once per frame
@@ -26,6 +26,7 @@ public class EnemyBullet : MonoBehaviour
         }
         else if (other.CompareTag("Wall"))
         {
+            Debug.Log("hello");
             Destroy(this.gameObject);
         }
     }

@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 744487858075614936}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 744487858742506698}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 744487859140884733}
   m_Layer: 0
   m_Name: Arch (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1733,7 +1733,7 @@ GameObject:
   - component: {fileID: 744487859280311272}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1828,7 +1828,7 @@ GameObject:
   - component: {fileID: 744487859308640898}
   m_Layer: 0
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

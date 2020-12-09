@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 320928457}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 769426243}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 1037482047}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 1099765150}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 856092030843733476}
   m_Layer: 0
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 856092030877279143}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 856092032091808994}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 856092032568394891}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1277,7 +1277,7 @@ GameObject:
   - component: {fileID: 3158646865535961172}
   m_Layer: 0
   m_Name: Stairs (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4694,7 +4694,7 @@ GameObject:
   - component: {fileID: 6048652405894800233}
   m_Layer: 0
   m_Name: Stairs (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8111,7 +8111,7 @@ GameObject:
   - component: {fileID: 1160818967153072021}
   m_Layer: 0
   m_Name: Stairs (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11528,7 +11528,7 @@ GameObject:
   - component: {fileID: 601697925833004288}
   m_Layer: 0
   m_Name: Stairs (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
