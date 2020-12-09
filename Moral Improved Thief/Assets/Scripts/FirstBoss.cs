@@ -16,6 +16,8 @@ public class FirstBoss : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        maxHp = 100f;
+        hp = maxHp;
         theta = 0;
         laser = transform.Find("Laser").GetComponent<LineRenderer>();
         freq = 0.04f;
@@ -23,6 +25,7 @@ public class FirstBoss : Enemy
         leftLaser = true;
         select = FindObjectOfType<Choice>().gameObject;
         select.SetActive(false);
+        //Spawn();
     }
 
     // Update is called once per frame

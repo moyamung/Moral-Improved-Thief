@@ -25,7 +25,7 @@ public class FirstBossController : MonoBehaviour
         if (state == State.Left)
         {
             boss.LaserOff(0);
-            boss.Dead();
+            //boss.Dead();
         }
         else
         {

@@ -1655,7 +1655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c36e39cd3e88264e8eed5223931b9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 0
+  maxHp: 100
   target: {fileID: 0}
   state: 0
   isDead: 0
@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c36e39cd3e88264e8eed5223931b9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 0
+  maxHp: 100
   target: {fileID: 0}
   state: 0
   isDead: 0
@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c36e39cd3e88264e8eed5223931b9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 0
+  maxHp: 100
   target: {fileID: 0}
   state: 0
   isDead: 0
@@ -1742,7 +1742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c36e39cd3e88264e8eed5223931b9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 0
+  maxHp: 100
   target: {fileID: 0}
   state: 0
   isDead: 0
@@ -1771,7 +1771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c36e39cd3e88264e8eed5223931b9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 0
+  maxHp: 100
   target: {fileID: 0}
   state: 0
   isDead: 0

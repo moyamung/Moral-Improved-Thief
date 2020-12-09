@@ -85,6 +85,9 @@
     <Compile Include="Assets\Scripts\Reconnector.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\UI.cs" />
+    <Compile Include="Assets\Scripts\PlayerMissile.cs" />
+    <Compile Include="Assets\Scripts\PlayerBullet.cs" />
+    <Compile Include="Assets\Scripts\BlastController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Story Texts\LastEndingFailure.txt" />

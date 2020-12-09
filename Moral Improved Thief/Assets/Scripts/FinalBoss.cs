@@ -7,7 +7,7 @@ public class FinalBoss : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] LineRenderer laser;
-    List<GameObject> servers;
+    public List<GameObject> servers;
     float radius = 10f;
     (int, int)[] laserPos = { (0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4) };
     (int, int) nowLaserPos;
@@ -36,6 +36,15 @@ public class FinalBoss : MonoBehaviour
                 hitInfo.collider.GetComponent<PlayerController>().OnHit(10f);
             }
         }
+        int cnt = 0;
+        foreach (GameObject server in servers)
+        {
+            if (server.GetComponent<Enemy>().isDead == true)
+            {
+                cnt++;
+            }
+        }
+        if (cnt == 5) Dead();
     }
 
     void Laser()

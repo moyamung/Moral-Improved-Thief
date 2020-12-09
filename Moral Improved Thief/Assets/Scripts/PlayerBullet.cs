@@ -1,13 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     // Start is called before the first frame update
-    float speed = 2f;
+    float bulletspeed = 8f;
     public GameObject explosionPrefab;
-    float bulletLife = 5f;
+    float bullettime = 5f;
     void Start()
     {
         
@@ -16,15 +16,15 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        transform.Translate(Vector3.up * bulletspeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Enemy"))
         {
             Instantiate (explosionPrefab, this.gameObject.transform.position, Quaternion.identity);
-            other.GetComponent<PlayerController>().OnHit(5f);
+            other.GetComponent<Enemy>().OnHit(5f);
             Destroy(this.gameObject);
         }
         else if (other.CompareTag("Wall"))
@@ -34,9 +34,9 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    IEnumerator BulletLife()
+    IEnumerator BulletTime()
     {
-        yield return new WaitForSeconds(bulletLife);
+        yield return new WaitForSeconds(bullettime);
         Destroy(this.gameObject);
     }
 }

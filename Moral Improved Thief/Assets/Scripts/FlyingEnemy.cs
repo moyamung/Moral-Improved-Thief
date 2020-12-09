@@ -13,6 +13,10 @@ public class FlyingEnemy : Enemy
     {
         speed = 2f;
         attackAble = true;
+        maxHp = 10f;
+        hp = maxHp;
+        isDead = false;
+        //Spawn();
     }
 
     // Update is called once per frame

@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public float maxHp;
     public float hp;
 
+    public GameObject rifleBullet;
+    public GameObject missile;
+
     bool portalUseable;
 
     float changetype;
@@ -91,6 +94,9 @@ public class PlayerController : MonoBehaviour
     public void OnFire()
     {
         //attack action
+        GameObject bullet = Instantiate(rifleBullet, this.transform.position + Vector3.forward * 0.3f + Vector3.up, Quaternion.identity);
+        bullet.transform.up = this.transform.forward;
+        /*
         switch(actiontype)
         {
             case 0:
@@ -103,12 +109,15 @@ public class PlayerController : MonoBehaviour
                 isSmash = true;
                 break;
         }
-
+        */
     }
 
     public void OnSkill()
     {
         //skill use
+        GameObject miss = Instantiate(missile, this.transform.position + Vector3.forward * 0.3f + Vector3.up, Quaternion.identity);
+        miss.transform.up = this.transform.forward;
+        /*
         switch(actiontype)
         {
             case 0:
@@ -132,12 +141,15 @@ public class PlayerController : MonoBehaviour
                 OnInteract();
                 break;
         }
+        */
     }
 
     public void OnChangeMode(InputValue context)
     {
         //Mode change
         //Debug.Log("ModChange");
+        return;
+        /*
         changetype = context.Get<float>();
         if(changetype < 0)
         {
@@ -155,7 +167,7 @@ public class PlayerController : MonoBehaviour
             {
                 actiontype = 0;
             }
-        }
+        }*/
     }
 
     void GroundCheck()

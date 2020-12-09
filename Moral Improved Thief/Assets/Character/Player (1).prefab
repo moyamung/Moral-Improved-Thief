@@ -2097,6 +2097,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 100
+  hp: 0
+  rifleBullet: {fileID: 4700727643939432525, guid: d85c53176536ea045b25cac1e2092b1b, type: 3}
+  missile: {fileID: 4417788071439470449, guid: 9eedc69dcef2c5d428b8e81a963c18ae, type: 3}
 --- !u!1 &5912219285812877742
 GameObject:
   m_ObjectHideFlags: 0
