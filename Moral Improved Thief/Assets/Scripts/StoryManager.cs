@@ -45,7 +45,15 @@ public class StoryManager : MonoBehaviour
         textUI.text = it.Current;
     }
 
-
+    public void OnSkip()
+    {
+        if (isEnd)
+        {
+            GameManager gm = FindObjectOfType<GameManager>();
+            gm.Reset();
+        }
+        SceneManager.LoadScene(nextScene);
+    }
 
     IEnumerator<string> ReadText(string path)
     {

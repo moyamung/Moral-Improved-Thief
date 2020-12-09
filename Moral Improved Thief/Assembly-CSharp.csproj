@@ -55,41 +55,42 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Elevator.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Gizmos.cs" />
+    <Compile Include="Assets\Scripts\Intro.cs" />
     <Compile Include="Assets\Scripts\FirstBossController.cs" />
+    <Compile Include="Assets\Scripts\LobbyPortal.cs" />
+    <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\PortalController.cs" />
+    <Compile Include="Assets\Scripts\FinalBoss.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\StoryManager.cs" />
     <Compile Include="Assets\Scripts\FirstBoss.cs" />
     <Compile Include="Assets\Scripts\MapManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PortalManager.cs" />
+    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\FinalBossServer.cs" />
     <Compile Include="Assets\Scripts\AutoPortal.cs" />
     <Compile Include="Assets\Scripts\MiniMap.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Choice.cs" />
     <Compile Include="Assets\Scripts\FlyingEnemy.cs" />
     <Compile Include="Assets\Scripts\PriorityQueue.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Elevator.cs" />
-    <Compile Include="Assets\Scripts\Rotator.cs" />
-    <Compile Include="Assets\Scripts\StoryManager.cs" />
-    <Compile Include="Assets\Scripts\FinalBoss.cs" />
-    <Compile Include="Assets\Scripts\FinalBossServer.cs" />
-    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
-    <Compile Include="Assets\Scripts\Intro.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Reconnector.cs" />
-    <Compile Include="Assets\Scripts\Choice.cs" />
-    <Compile Include="Assets\Scripts\LobbyPortal.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Story Texts\LastEndingFailure.txt" />
      <None Include="Assets\Story Texts\FirstEnding.txt" />
      <None Include="Assets\Story Texts\LastEndingSuccess.txt" />
      <None Include="Assets\Story Texts\StartStory.txt" />
+     <None Include="Assets\Story Texts\DeadEnd.txt" />
      <None Include="Assets\Story Texts\TestText.txt" />
      <None Include="Assets\Story Texts\ThirdEnding.txt" />
      <None Include="Assets\Story Texts\SecondEnding.txt" />

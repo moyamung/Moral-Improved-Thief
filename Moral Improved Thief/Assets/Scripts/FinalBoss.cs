@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalBoss : MonoBehaviour
 {
@@ -42,5 +43,10 @@ public class FinalBoss : MonoBehaviour
         nowLaserPos = laserPos[r];
         laser.SetPosition(0, servers[nowLaserPos.Item1].transform.position);
         laser.SetPosition(1, servers[nowLaserPos.Item2].transform.position);
+    }
+
+    void Dead()
+    {
+        SceneManager.LoadScene("LastEndingSuccess");
     }
 }

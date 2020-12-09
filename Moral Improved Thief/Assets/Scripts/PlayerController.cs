@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour
     //액션 모드를 저장하는 변수, 0, 1, 2의 값을 가질 수 있고 기본 상태는 0에서 시작
     int actiontype = 0;
 
-    bool Dead, needtoidle, isFire, isMissile, isPunch, isCharge, isSmash, isHacking;
+    bool isDead, needtoidle, isFire, isMissile, isPunch, isCharge, isSmash, isHacking;
 
     int DeadHash, needtoidleHash, isFireHash, isMissileHash, isPunchHash, isChargeHash, isSmashHash, isHackingHash;
     
@@ -175,7 +176,7 @@ public class PlayerController : MonoBehaviour
             _rigidbody.velocity += new Vector3(0f, jump, 0f);
         }
         */
-        if(Dead = true || movementX == 0)
+        if(isDead = true || movementX == 0)
         {
             needtoidle = true;
         }
@@ -187,7 +188,7 @@ public class PlayerController : MonoBehaviour
         else movex = 1f;
         movey = 0f;
 
-        animator.SetBool(DeadHash, Dead);
+        animator.SetBool(DeadHash, isDead);
         animator.SetBool(needtoidleHash, needtoidle);
         animator.SetBool(isFireHash, isFire);
         animator.SetBool(isMissileHash, isMissile);
@@ -210,7 +211,7 @@ public class PlayerController : MonoBehaviour
         isHacking = false;
         isJump=false;
 
-        if(Dead == false)
+        if(isDead == false)
         {
             Hit = false;
         }
@@ -250,5 +251,12 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(portalDelay);
         portalUseable = true;
+    }
+
+    void Dead()
+    {
+        GameManager gm = FindObjectOfType<GameManager>();
+        if (gm.nowstage == 4) SceneManager.LoadScene("LastEndingFailure");
+        else SceneManager.LoadScene("DeadEnd");
     }
 }
